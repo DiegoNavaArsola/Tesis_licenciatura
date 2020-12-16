@@ -648,7 +648,7 @@ o4_p <- rbind.data.frame(d4_p30_df,b4_p15_df,e4_p30_df)
 ###########################################
 ### Si hay prblemas -> dev.off()
 
-# Funcion para graficar los datos
+# Funcion para graficar los datos en X Y Z
 grafica <- function(dataframe,X,Y,deg,wrt,m_orb,m_brisk,m_pca) {
   ggplot(dataframe, aes(x=X,y=Y) )+
     geom_point(aes(color = alg)) +
@@ -665,13 +665,30 @@ grafica <- function(dataframe,X,Y,deg,wrt,m_orb,m_brisk,m_pca) {
          color = "Algoritmo")
 }
 
+# Funcion para graficar los datos en roll, pitch, yaw
+grafica_deg <- function(dataframe,X,Y,deg,wrt,m_orb,m_brisk,m_pca) {
+  ggplot(dataframe, aes(x=X,y=Y) )+
+    geom_point(aes(color = alg)) +
+    theme_bw()+
+    scale_y_continuous(breaks = seq(-360, 360, by = 10))+
+    geom_hline(yintercept = 0,linetype = "dashed",color = "black",size = 1.2)+
+    geom_hline(yintercept = mean(m_orb),linetype = "solid",color = "orange",size = 0.3)+
+    geom_hline(yintercept = mean(m_brisk),linetype = "solid",color = "green",size = 0.3)+
+    geom_hline(yintercept = mean(m_pca),linetype = "solid",color = "blue",size = 0.3)+
+    labs(title = paste("Objeto 1: Esfera a ",deg,"° (",wrt,")"),
+         subtitle = "Respecto al robot",
+         x = "Tiempo [s]",
+         y = paste("Ángulo en",wrt,"[°]"),
+         color = "Algoritmo")
+}
+
 #Objeto 1 0 grados
 g_o1_0d_x <- grafica(o1_0,o1_0$time,o1_0$dx,"0","X",d1_0_df$dx,b1_0_df$dx,e1_0_df$dx)
 g_o1_0d_y <- grafica(o1_0,o1_0$time,o1_0$dy,"0","Y",d1_0_df$dy,b1_0_df$dy,e1_0_df$dy)
 g_o1_0d_z <- grafica(o1_0,o1_0$time,o1_0$dz,"0","Z",d1_0_df$dz,b1_0_df$dz,e1_0_df$dz)
-g_o1_0d_r <- grafica(o1_0,o1_0$time,o1_0$dr,"0","roll",d1_0_df$dr,b1_0_df$dr,e1_0_df$dr)
-g_o1_0d_p <- grafica(o1_0,o1_0$time,o1_0$dp,"0","pitch",d1_0_df$dp,b1_0_df$dp,e1_0_df$dp)
-g_o1_0d_y <- grafica(o1_0,o1_0$time,o1_0$dya,"0","yaw",d1_0_df$dya,b1_0_df$dya,e1_0_df$dya)
+g_o1_0d_r <- grafica_deg(o1_0,o1_0$time,o1_0$dr,"0","roll",d1_0_df$dr,b1_0_df$dr,e1_0_df$dr)
+g_o1_0d_p <- grafica_deg(o1_0,o1_0$time,o1_0$dp,"0","pitch",d1_0_df$dp,b1_0_df$dp,e1_0_df$dp)
+g_o1_0d_y <- grafica_deg(o1_0,o1_0$time,o1_0$dya,"0","yaw",d1_0_df$dya,b1_0_df$dya,e1_0_df$dya)
 
 
 
