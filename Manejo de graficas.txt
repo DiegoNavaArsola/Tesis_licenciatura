@@ -1,0 +1,10 @@
+
+Para cada objeto:
+
+1 grafica por variable: X,Y,Z,r,p,y -> 6 graficas ahí mismo con los tres algoritmos diferentes
+
+A 0°: 
+
+3 graficas por objeto
+
+6*3 -> 18 gráficas max
