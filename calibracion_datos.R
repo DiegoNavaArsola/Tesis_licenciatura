@@ -4,16 +4,13 @@ library(plot3D)
 
 data_calib <- read.delim("calib.dat",header = TRUE,sep = " ")
 
-sdiff <- sample(data_calib$diff_c_m,10000)
-
 avg_diff <- mean(data_calib$diff_c_m)
-#plot(sdiff)
 
 regresion <- lm(data_calib$measured_depth ~ data_calib$computed_depth)
 summary(regresion)
 
 # Nivel de confianza: 95%
-# Mrgen de error: 1%
+# Margen de error: 1%
 muestra <- data_calib %>%
   sample_n(size = 9475,replace = FALSE)
 
