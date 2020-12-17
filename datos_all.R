@@ -193,9 +193,9 @@ corz4 = -20.84
 # Para algoritmo edgar
 ye <- -0.00025
 
-####################################
-#### Calculo de diferencias ORB ####
-####################################
+##############################################
+#### Calculo de diferencias absolutas ORB ####
+##############################################
 
 # Cero grados
 d1_0_diffx <- ob1_e_fo_0_c$X - x1
@@ -424,6 +424,147 @@ e4_p30_diffr <- ob4_ca_e_p30_c$roll - roll4
 e4_p30_diffp <- ob4_ca_e_p30_c$pitch - pitch4
 e4_p30_diffya <- ob4_ca_e_p30_c$yaw - yaw4
 
+###############################################
+#### Errores relativos ORB (Solo en X,Y,Z) ####
+###############################################
+
+# 0 grados
+er_d1_0_diffx <- 100 * abs(d1_0_diffx) / x1
+er_d1_0_diffy <- 100 * abs(d1_0_diffy) / abs(y1)
+er_d1_0_diffz <- 100 * abs(d1_0_diffz) / z1
+
+er_d2_0_diffx <- 100 * abs(d2_0_diffx) / x2
+er_d2_0_diffy <- 100 * abs(d2_0_diffy) / abs(y2)
+er_d2_0_diffz <- 100 * abs(d2_0_diffz) / z2
+
+er_d3_0_diffx <- 100 * abs(d3_0_diffx) / x3
+er_d3_0_diffy <- 100 * abs(d3_0_diffy) / abs(y3)
+er_d3_0_diffz <- 100 * abs(d3_0_diffz) / z3
+
+er_d4_0_diffx <- 100 * abs(d4_0_diffx) / x4
+er_d4_0_diffy <- 100 * abs(d4_0_diffy) / abs(y4)
+er_d4_0_diffz <- 100 * abs(d4_0_diffz) / z4
+
+# -30, -20 grados
+er_d1_m30_diffx <- 100 * abs(d1_m30_diffx) / x1
+er_d1_m30_diffy <- 100 * abs(d1_m30_diffy) / abs(y1)
+er_d1_m30_diffz <- 100 * abs(d1_m30_diffz) / z1
+
+er_d2_m30_diffx <- 100 * abs(d2_m30_diffx) / x2
+er_d2_m30_diffy <- 100 * abs(d2_m30_diffy) / abs(y2)
+er_d2_m30_diffz <- 100 * abs(d2_m30_diffz) / z2
+
+er_d3_m30_diffx <- 100 * abs(d3_m30_diffx) / x3
+er_d3_m30_diffy <- 100 * abs(d3_m30_diffy) / abs(y3)
+er_d3_m30_diffz <- 100 * abs(d3_m30_diffz) / z3
+
+er_d4_m20_diffx <- 100 * abs(d4_m30_diffx) / x4
+er_d4_m20_diffy <- 100 * abs(d4_m30_diffy) / abs(y4)
+er_d4_m20_diffz <- 100 * abs(d4_m30_diffz) / z4
+
+# +10, 30, 20, 30 grados
+er_d1_p10_diffx <- 100 * abs(d1_p10_diffx) / x1
+er_d1_p10_diffy <- 100 * abs(d1_p10_diffy) / abs(y1)
+er_d1_p10_diffz <- 100 * abs(d1_p10_diffz) / z1
+
+er_d2_p30_diffx <- 100 * abs(d2_p30_diffx) / x2
+er_d2_p30_diffy <- 100 * abs(d2_p30_diffy) / abs(y2)
+er_d2_p30_diffz <- 100 * abs(d2_p30_diffz) / z2
+
+er_d3_p20_diffx <- 100 * abs(d3_p20_diffx) / x3
+er_d3_p20_diffy <- 100 * abs(d3_p20_diffy) / abs(y3)
+er_d3_p20_diffz <- 100 * abs(d3_p20_diffz) / z3
+
+er_d4_p30_diffx <- 100 * abs(d4_p30_diffx) / x4
+er_d4_p30_diffy <- 100 * abs(d4_p30_diffy) / abs(y4)
+er_d4_p30_diffz <- 100 * abs(d4_p30_diffz) / z4
+
+#################################################
+#### Errores relativos BRISK (Solo en X,Y,Z) ####
+#################################################
+
+# 0 grados
+er_b1_0_diffx <- 100 * abs(b1_0_diffx) / x1
+er_b1_0_diffy <- 100 * abs(b1_0_diffy) / abs(y1)
+er_b1_0_diffz <- 100 * abs(b1_0_diffz) / z1
+
+er_b2_0_diffx <- 100 * abs(b2_0_diffx) / x2
+er_b2_0_diffy <- 100 * abs(b2_0_diffy) / abs(y2)
+er_b2_0_diffz <- 100 * abs(b2_0_diffz) / z2
+
+er_b3_0_diffx <- 100 * abs(b3_0_diffx) / x3
+er_b3_0_diffy <- 100 * abs(b3_0_diffy) / abs(y3)
+er_b3_0_diffz <- 100 * abs(b3_0_diffz) / z3
+
+er_b4_0_diffx <- 100 * abs(b4_0_diffx) / x4
+er_b4_0_diffy <- 100 * abs(b4_0_diffy) / abs(y4)
+er_b4_0_diffz <- 100 * abs(b4_0_diffz) / z4
+
+# -15, -10 grados
+er_b2_m15_diffx <- 100 * abs(b2_m15_diffx) / x2
+er_b2_m15_diffy <- 100 * abs(b2_m15_diffy) / abs(y2)
+er_b2_m15_diffz <- 100 * abs(b2_m15_diffz) / z2
+
+er_b3_m15_diffx <- 100 * abs(b3_m15_diffx) / x3
+er_b3_m15_diffy <- 100 * abs(b3_m15_diffy) / abs(y3)
+er_b3_m15_diffz <- 100 * abs(b3_m15_diffz) / z3
+
+er_b4_m10_diffx <- 100 * abs(b4_m10_diffx) / x4
+er_b4_m10_diffy <- 100 * abs(b4_m10_diffy) / abs(y4)
+er_b4_m10_diffz <- 100 * abs(b4_m10_diffz) / z4
+
+# +15 grados
+er_b2_p15_diffx <- 100 * abs(b2_p15_diffx) / x2
+er_b2_p15_diffy <- 100 * abs(b2_p15_diffy) / abs(y2)
+er_b2_p15_diffz <- 100 * abs(b2_p15_diffz) / z2
+
+er_b3_p20_diffx <- 100 * abs(b3_p15_diffx) / x3
+er_b3_p20_diffy <- 100 * abs(b3_p15_diffy) / abs(y3)
+er_b3_p20_diffz <- 100 * abs(b3_p15_diffz) / z3
+
+er_b4_p30_diffx <- 100 * abs(b4_p15_diffx) / x4
+er_b4_p30_diffy <- 100 * abs(b4_p15_diffy) / abs(y4)
+er_b4_p30_diffz <- 100 * abs(b4_p15_diffz) / z4
+
+##########################################################
+#### Errores relativos con RANSAC-PCA (Solo en X,Y,Z) ####
+##########################################################
+
+# 0 grados
+er_e1_0_diffx <- 100 * abs(e1_0_diffx) / x1
+er_e1_0_diffy <- 100 * abs(e1_0_diffy) / abs(y1)
+er_e1_0_diffz <- 100 * abs(e1_0_diffz) / z1
+
+er_e2_0_diffx <- 100 * abs(e2_0_diffx) / x2
+er_e2_0_diffy <- 100 * abs(e2_0_diffy) / abs(y2)
+er_e2_0_diffz <- 100 * abs(e2_0_diffz) / z2
+
+er_e3_0_diffx <- 100 * abs(e3_0_diffx) / x3
+er_e3_0_diffy <- 100 * abs(e3_0_diffy) / abs(y3)
+er_e3_0_diffz <- 100 * abs(e3_0_diffz) / z3
+
+er_e4_0_diffx <- 100 * abs(e4_0_diffx) / x4
+er_e4_0_diffy <- 100 * abs(e4_0_diffy) / abs(y4)
+er_e4_0_diffz <- 100 * abs(e4_0_diffz) / z4
+
+# -30
+er_e3_m30_diffx <- 100 * abs(e3_m30_diffx) / x3
+er_e3_m30_diffy <- 100 * abs(e3_m30_diffy) / abs(y3)
+er_e3_m30_diffz <- 100 * abs(e3_m30_diffz) / z3
+
+er_e4_m30_diffx <- 100 * abs(e4_m30_diffx) / x4
+er_e4_m30_diffy <- 100 * abs(e4_m30_diffy) / abs(y4)
+er_e4_m30_diffz <- 100 * abs(e4_m30_diffz) / z4
+
+# +30
+er_e3_p30_diffx <- 100 * abs(e3_p30_diffx) / x3
+er_e3_p30_diffy <- 100 * abs(e3_p30_diffy) / abs(y3)
+er_e3_p30_diffz <- 100 * abs(e3_p30_diffz) / z3
+
+er_e4_p30_diffx <- 100 * abs(e4_p30_diffx) / x4
+er_e4_p30_diffy <- 100 * abs(e4_p30_diffy) / abs(y4)
+er_e4_p30_diffz <- 100 * abs(e4_p30_diffz) / z4
+
 ###########################################################
 ## Lista con los datos obtenidos para facilitar cáclulos ##
 ###########################################################
@@ -627,6 +768,7 @@ e4_p30_df <- data.frame(time = ob4_ca_e_p30_c$time, dx = e4_p30_diffx, dy = e4_p
 o1_0 <- rbind.data.frame(d1_0_df,b1_0_df,e1_0_df)
   o1_0 <- o1_0[-c(179),] #Outlier de los datos. Eliminado por motivos de graficacion
 o2_0 <- rbind.data.frame(d2_0_df,b2_0_df,e2_0_df)
+  o2_0 <- o2_0[-c(200,317),]
 o3_0 <- rbind.data.frame(d3_0_df,b3_0_df,e3_0_df)
 o4_0 <- rbind.data.frame(d4_0_df,b4_0_df,e4_0_df)
 
@@ -649,7 +791,7 @@ o4_p <- rbind.data.frame(d4_p30_df,b4_p15_df,e4_p30_df)
 ### Si hay prblemas -> dev.off()
 
 # Funcion para graficar los datos en X Y Z
-grafica <- function(dataframe,X,Y,deg,wrt,m_orb,m_brisk,m_pca) {
+grafica <- function(dataframe,X,Y,deg,wrt,m_orb,m_brisk,m_pca,numero,objeto) {
   ggplot(dataframe, aes(x=X,y=Y) )+
     geom_point(aes(color = alg)) +
     theme_bw()+
@@ -658,7 +800,7 @@ grafica <- function(dataframe,X,Y,deg,wrt,m_orb,m_brisk,m_pca) {
     geom_hline(yintercept = mean(m_orb),linetype = "solid",color = "orange",size = 0.3)+
     geom_hline(yintercept = mean(m_brisk),linetype = "solid",color = "green",size = 0.3)+
     geom_hline(yintercept = mean(m_pca),linetype = "solid",color = "blue",size = 0.3)+
-    labs(title = paste("Objeto 1: Esfera a ",deg,"° en ",wrt),
+    labs(title = paste("Objeto",numero,":",objeto,"a",deg,"° en ",wrt),
          subtitle = "Respecto al robot",
          x = "Tiempo [s]",
          y = paste("Distancia en",wrt,"[m]"),
@@ -666,30 +808,96 @@ grafica <- function(dataframe,X,Y,deg,wrt,m_orb,m_brisk,m_pca) {
 }
 
 # Funcion para graficar los datos en roll, pitch, yaw
-grafica_deg <- function(dataframe,X,Y,deg,wrt,m_orb,m_brisk,m_pca) {
+grafica_deg <- function(dataframe,X,Y,deg,wrt,m_orb,m_brisk,m_pca,numero,objeto) {
   ggplot(dataframe, aes(x=X,y=Y) )+
     geom_point(aes(color = alg)) +
     theme_bw()+
-    scale_y_continuous(breaks = seq(-360, 360, by = 10))+
+    scale_y_continuous(breaks = seq(-360, 360, by = 15))+
     geom_hline(yintercept = 0,linetype = "dashed",color = "black",size = 1.2)+
     geom_hline(yintercept = mean(m_orb),linetype = "solid",color = "orange",size = 0.3)+
     geom_hline(yintercept = mean(m_brisk),linetype = "solid",color = "green",size = 0.3)+
     geom_hline(yintercept = mean(m_pca),linetype = "solid",color = "blue",size = 0.3)+
-    labs(title = paste("Objeto 1: Esfera a ",deg,"° (",wrt,")"),
+    labs(title = paste("Objeto",numero,":",objeto,"a",deg,"° (",wrt,")"),
          subtitle = "Respecto al robot",
          x = "Tiempo [s]",
-         y = paste("Ángulo en",wrt,"[°]"),
+         y = paste("Giro en",wrt,"[°]"),
          color = "Algoritmo")
 }
+#############################
+#### Graficas a 0 grados ####
+#############################
 
-#Objeto 1 0 grados
-g_o1_0d_x <- grafica(o1_0,o1_0$time,o1_0$dx,"0","X",d1_0_df$dx,b1_0_df$dx,e1_0_df$dx)
-g_o1_0d_y <- grafica(o1_0,o1_0$time,o1_0$dy,"0","Y",d1_0_df$dy,b1_0_df$dy,e1_0_df$dy)
-g_o1_0d_z <- grafica(o1_0,o1_0$time,o1_0$dz,"0","Z",d1_0_df$dz,b1_0_df$dz,e1_0_df$dz)
-g_o1_0d_r <- grafica_deg(o1_0,o1_0$time,o1_0$dr,"0","roll",d1_0_df$dr,b1_0_df$dr,e1_0_df$dr)
-g_o1_0d_p <- grafica_deg(o1_0,o1_0$time,o1_0$dp,"0","pitch",d1_0_df$dp,b1_0_df$dp,e1_0_df$dp)
-g_o1_0d_y <- grafica_deg(o1_0,o1_0$time,o1_0$dya,"0","yaw",d1_0_df$dya,b1_0_df$dya,e1_0_df$dya)
+#Objeto 1
+g_o1_0d_x <- grafica(o1_0,o1_0$time,o1_0$dx,"0","X",d1_0_df$dx,b1_0_df$dx,e1_0_df$dx,"1","Esfera")
+g_o1_0d_y <- grafica(o1_0,o1_0$time,o1_0$dy,"0","Y",d1_0_df$dy,b1_0_df$dy,e1_0_df$dy,"1","Esfera")
+g_o1_0d_z <- grafica(o1_0,o1_0$time,o1_0$dz,"0","Z",d1_0_df$dz,b1_0_df$dz,e1_0_df$dz,"1","Esfera")
+g_o1_0d_r <- grafica_deg(o1_0,o1_0$time,o1_0$dr,"0","roll",d1_0_df$dr,b1_0_df$dr,e1_0_df$dr,"1","Esfera")
+g_o1_0d_p <- grafica_deg(o1_0,o1_0$time,o1_0$dp,"0","pitch",d1_0_df$dp,b1_0_df$dp,e1_0_df$dp,"1","Esfera")
+g_o1_0d_ya <- grafica_deg(o1_0,o1_0$time,o1_0$dya,"0","yaw",d1_0_df$dya,b1_0_df$dya,e1_0_df$dya,"1","Esfera")
+
+#Objeto 2
+g_o2_0d_x <- grafica(o2_0,o2_0$time,o2_0$dx,"0","X",d2_0_df$dx,b2_0_df$dx,e2_0_df$dx,"2","Lata")
+g_o2_0d_y <- grafica(o2_0,o2_0$time,o2_0$dy,"0","Y",d2_0_df$dy,b2_0_df$dy,e2_0_df$dy,"2","Lata")
+g_o2_0d_z <- grafica(o2_0,o2_0$time,o2_0$dz,"0","Z",d2_0_df$dz,b2_0_df$dz,e2_0_df$dz,"2","Lata")
+g_o2_0d_r <- grafica_deg(o2_0,o2_0$time,o2_0$dr,"0","roll",d2_0_df$dr,b2_0_df$dr,e2_0_df$dr,"2","Lata")
+g_o2_0d_p <- grafica_deg(o2_0,o2_0$time,o2_0$dp,"0","pitch",d2_0_df$dp,b2_0_df$dp,e2_0_df$dp,"2","Lata")
+g_o2_0d_ya <- grafica_deg(o2_0,o2_0$time,o2_0$dya,"0","yaw",d2_0_df$dya,b2_0_df$dya,e2_0_df$dya,"2","Lata")
+
+#Objeto 3
+g_o3_0d_x <- grafica(o3_0,o3_0$time,o3_0$dx,"0","X",d3_0_df$dx,b3_0_df$dx,e3_0_df$dx,"3","Cubo")
+g_o3_0d_y <- grafica(o3_0,o3_0$time,o3_0$dy,"0","Y",d3_0_df$dy,b3_0_df$dy,e3_0_df$dy,"3","Cubo")
+g_o3_0d_z <- grafica(o3_0,o3_0$time,o3_0$dz,"0","Z",d3_0_df$dz,b3_0_df$dz,e3_0_df$dz,"3","Cubo")
+g_o3_0d_r <- grafica_deg(o3_0,o3_0$time,o3_0$dr,"0","roll",d3_0_df$dr,b3_0_df$dr,e3_0_df$dr,"3","Cubo")
+g_o3_0d_p <- grafica_deg(o3_0,o3_0$time,o3_0$dp,"0","pitch",d3_0_df$dp,b3_0_df$dp,e3_0_df$dp,"3","Cubo")
+g_o3_0d_ya <- grafica_deg(o3_0,o3_0$time,o3_0$dya,"0","yaw",d3_0_df$dya,b3_0_df$dya,e3_0_df$dya,"3","Cubo")
+
+#Objeto 4
+g_o4_0d_x <- grafica(o4_0,o4_0$time,o4_0$dx,"0","X",d4_0_df$dx,b4_0_df$dx,e4_0_df$dx,"4","Caja")
+g_o4_0d_y <- grafica(o4_0,o4_0$time,o4_0$dy,"0","Y",d4_0_df$dy,b4_0_df$dy,e4_0_df$dy,"4","Caja")
+g_o4_0d_z <- grafica(o4_0,o4_0$time,o4_0$dz,"0","Z",d4_0_df$dz,b4_0_df$dz,e4_0_df$dz,"4","Caja")
+g_o4_0d_r <- grafica_deg(o4_0,o4_0$time,o4_0$dr,"0","roll",d4_0_df$dr,b4_0_df$dr,e4_0_df$dr,"4","Caja")
+g_o4_0d_p <- grafica_deg(o4_0,o4_0$time,o4_0$dp,"0","pitch",d4_0_df$dp,b4_0_df$dp,e4_0_df$dp,"4","Caja")
+g_o4_0d_ya <- grafica_deg(o4_0,o4_0$time,o4_0$dya,"0","yaw",d4_0_df$dya,b4_0_df$dya,e4_0_df$dya,"4","Caja")
+
+#############################
+#### Graficas a m grados ####
+#############################
+
+#Objeto 3
+g_o3_md_x <- grafica(o3_m,o3_m$time,o3_m$dx,"-30°, -15°, -30","X",d3_m30_df$dx,b3_m15_df$dx,e3_m30_df$dx,"3","Cubo")
+g_o3_md_y <- grafica(o3_m,o3_m$time,o3_m$dy,"-30°, -15°, -30","Y",d3_m30_df$dy,b3_m15_df$dy,e3_m30_df$dy,"3","Cubo")
+g_o3_md_z <- grafica(o3_m,o3_m$time,o3_m$dz,"-30°, -15°, -30","Z",d3_m30_df$dz,b3_m15_df$dz,e3_m30_df$dz,"3","Cubo")
+g_o3_md_r <- grafica_deg(o3_m,o3_m$time,o3_m$dr,"-30°, -15°, -30","roll",d3_m30_df$dr,b3_m15_df$dr,e3_m30_df$dr,"3","Cubo")
+g_o3_md_p <- grafica_deg(o3_m,o3_m$time,o3_m$dp,"-30°, -15°, -30","pitch",d3_m30_df$dp,b3_m15_df$dp,e3_m30_df$dp,"3","Cubo")
+g_o3_md_ya <- grafica_deg(o3_m,o3_m$time,o3_m$dya,"-30°, -15°, -30","yaw",d3_m30_df$dya,b3_m15_df$dya,e3_m30_df$dya,"3","Cubo")
+
+#Objeto 4
+g_o4_md_x <- grafica(o4_0,o4_0$time,o4_0$dx,"0","X",d4_m20_df$dx,b4_m10_df$dx,e4_m30_df$dx,"4","Caja")
+g_o4_md_y <- grafica(o4_0,o4_0$time,o4_0$dy,"0","Y",d4_m20_df$dy,b4_m10_df$dy,e4_m30_df$dy,"4","Caja")
+g_o4_md_z <- grafica(o4_0,o4_0$time,o4_0$dz,"0","Z",d4_m20_df$dz,b4_m10_df$dz,e4_m30_df$dz,"4","Caja")
+g_o4_md_r <- grafica_deg(o4_0,o4_0$time,o4_0$dr,"0","roll",d4_m20_df$dr,b4_m10_df$dr,e4_m30_df$dr,"4","Caja")
+g_o4_md_p <- grafica_deg(o4_0,o4_0$time,o4_0$dp,"0","pitch",d4_m20_df$dp,b4_m10_df$dp,e4_m30_df$dp,"4","Caja")
+g_o4_md_ya <- grafica_deg(o4_0,o4_0$time,o4_0$dya,"0","yaw",d4_m20_df$dya,b4_m10_df$dya,e4_m30_df$dya,"4","Caja")
+
+#############################
+#### Graficas a p grados ####
+#############################
+
+#Objeto 3
+g_o3_pd_x <- grafica(o3_p,o3_p$time,o3_p$dx,"0","X",d3_p20_df$dx,b3_p15_df$dx,e3_p30_df$dx,"3","Cubo")
+g_o3_pd_y <- grafica(o3_p,o3_p$time,o3_p$dy,"0","Y",d3_p20_df$dy,b3_p15_df$dy,e3_p30_df$dy,"3","Cubo")
+g_o3_pd_z <- grafica(o3_p,o3_p$time,o3_p$dz,"0","Z",d3_p20_df$dz,b3_p15_df$dz,e3_p30_df$dz,"3","Cubo")
+g_o3_pd_r <- grafica_deg(o3_p,o3_p$time,o3_p$dr,"0","roll",d3_p20_df$dr,b3_p15_df$dr,e3_p30_df$dr,"3","Cubo")
+g_o3_pd_p <- grafica_deg(o3_p,o3_p$time,o3_p$dp,"0","pitch",d3_p20_df$dp,b3_p15_df$dp,e3_p30_df$dp,"3","Cubo")
+g_o3_pd_ya <- grafica_deg(o3_p,o3_p$time,o3_p$dya,"0","yaw",d3_p20_df$dya,b3_p15_df$dya,e3_p30_df$dya,"3","Cubo")
+
+#Objeto 4
+g_o4_pd_x <- grafica(o4_p,o4_p$time,o4_p$dx,"0","X",d4_p30_df$dx,b4_p15_df$dx,e4_p30_df$dx,"4","Caja")
+g_o4_pd_y <- grafica(o4_p,o4_p$time,o4_p$dy,"0","Y",d4_p30_df$dy,b4_p15_df$dy,e4_p30_df$dy,"4","Caja")
+g_o4_pd_z <- grafica(o4_p,o4_p$time,o4_p$dz,"0","Z",d4_p30_df$dz,b4_p15_df$dz,e4_p30_df$dz,"4","Caja")
+g_o4_pd_r <- grafica_deg(o4_p,o4_p$time,o4_p$dr,"0","roll",d4_p30_df$dr,b4_p15_df$dr,e4_p30_df$d,"4","Caja")
+g_o4_pd_p <- grafica_deg(o4_p,o4_p$time,o4_p$dp,"0","pitch",d4_p30_df$dp,b4_p15_df$dp,e4_p30_df$dp,"4","Caja")
+g_o4_pd_ya <- grafica_deg(o4_p,o4_p$time,o4_p$dya,"0","yaw",d4_p30_df$dya,b4_p15_df$dya,e4_p30_df$dya,"4","Caja")
 
 
-
-
+## 48 graficas
