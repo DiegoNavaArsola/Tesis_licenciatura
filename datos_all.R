@@ -198,231 +198,231 @@ ye <- -0.00025
 ##############################################
 
 # Cero grados
-d1_0_diffx <- ob1_e_fo_0_c$X - x1
-d1_0_diffy <- ob1_e_fo_0_c$Y - y1
-d1_0_diffz <- ob1_e_fo_0_c$Z - z1
-d1_0_diffr <- ob1_e_fo_0_c$roll - roll1
-d1_0_diffp <- ob1_e_fo_0_c$pitch - pitch1
-d1_0_diffya <- ob1_e_fo_0_c$yaw - yaw1
+d1_0_diffx <- -(ob1_e_fo_0_c$X - x1)
+d1_0_diffy <- -(ob1_e_fo_0_c$Y - y1)
+d1_0_diffz <- -(ob1_e_fo_0_c$Z - z1)
+d1_0_diffr <- -(ob1_e_fo_0_c$roll - roll1)
+d1_0_diffp <- -(ob1_e_fo_0_c$pitch - pitch1)
+d1_0_diffya <- -(ob1_e_fo_0_c$yaw - yaw1)
 
-d2_0_diffx <- ob2_l_fo_0_c$X - x2
-d2_0_diffy <- ob2_l_fo_0_c$Y - y2
-d2_0_diffz <- ob2_l_fo_0_c$Z - z2
-d2_0_diffr <- ob2_l_fo_0_c$roll - roll2
-d2_0_diffp <- ob2_l_fo_0_c$pitch - pitch2
-d2_0_diffya <- ob2_l_fo_0_c$yaw - yaw2
+d2_0_diffx <- -(ob2_l_fo_0_c$X - x2)
+d2_0_diffy <- -(ob2_l_fo_0_c$Y - y2)
+d2_0_diffz <- -(ob2_l_fo_0_c$Z - z2)
+d2_0_diffr <- -(ob2_l_fo_0_c$roll - roll2)
+d2_0_diffp <- -(ob2_l_fo_0_c$pitch - pitch2)
+d2_0_diffya <- -(ob2_l_fo_0_c$yaw - yaw2)
 
-d3_0_diffx <- ob3_cu_fo_0_c$X - x3
-d3_0_diffy <- ob3_cu_fo_0_c$Y - y3
-d3_0_diffz <- ob3_cu_fo_0_c$Z - z3
-d3_0_diffr <- as.numeric(ob3_cu_fo_0_c$roll) - roll3
-d3_0_diffp <- as.numeric(ob3_cu_fo_0_c$pitch) - pitch3
-d3_0_diffya <- ob3_cu_fo_0_c$yaw - yaw3
+d3_0_diffx <- -(ob3_cu_fo_0_c$X - x3)
+d3_0_diffy <- -(ob3_cu_fo_0_c$Y - y3)
+d3_0_diffz <- -(ob3_cu_fo_0_c$Z - z3)
+d3_0_diffr <- -(as.numeric(ob3_cu_fo_0_c$roll) - roll3)
+d3_0_diffp <- -(as.numeric(ob3_cu_fo_0_c$pitch) - pitch3)
+d3_0_diffya <- -(ob3_cu_fo_0_c$yaw - yaw3)
 
-d4_0_diffx <- ob4_ca_fo_0_c$X - x4
-d4_0_diffy <- ob4_ca_fo_0_c$Y - y4
-d4_0_diffz <- ob4_ca_fo_0_c$Z - z4
-d4_0_diffr <- ob4_ca_fo_0_c$roll - roll4
-d4_0_diffp <- ob4_ca_fo_0_c$pitch - pitch4
-d4_0_diffya <- ob4_ca_fo_0_c$yaw - yaw4
+d4_0_diffx <- -(ob4_ca_fo_0_c$X - x4)
+d4_0_diffy <- -(ob4_ca_fo_0_c$Y - y4)
+d4_0_diffz <- -(ob4_ca_fo_0_c$Z - z4)
+d4_0_diffr <- -(ob4_ca_fo_0_c$roll - roll4)
+d4_0_diffp <- -(ob4_ca_fo_0_c$pitch - pitch4)
+d4_0_diffya <- -(ob4_ca_fo_0_c$yaw - yaw4)
 
 # -30 grados
-d1_m30_diffx <- ob1_e_fo_m30_c$X - x1
-d1_m30_diffy <- ob1_e_fo_m30_c$Y - y1
-d1_m30_diffz <- ob1_e_fo_m30_c$Z - z1
-d1_m30_diffr <- ob1_e_fo_m30_c$roll - roll1
-d1_m30_diffp <- ob1_e_fo_m30_c$pitch - pitch1
-d1_m30_diffya <- ob1_e_fo_m30_c$yaw - yaw1 - 30
+d1_m30_diffx <- -(ob1_e_fo_m30_c$X - x1)
+d1_m30_diffy <- -(ob1_e_fo_m30_c$Y - y1)
+d1_m30_diffz <- -(ob1_e_fo_m30_c$Z - z1)
+d1_m30_diffr <- -(ob1_e_fo_m30_c$roll - roll1)
+d1_m30_diffp <- -(ob1_e_fo_m30_c$pitch - pitch1)
+d1_m30_diffya <- -(ob1_e_fo_m30_c$yaw - yaw1 - 30)
 
-d2_m30_diffx <- ob2_l_fo_m30_c$X - x2
-d2_m30_diffy <- ob2_l_fo_m30_c$Y - y2
-d2_m30_diffz <- ob2_l_fo_m30_c$Z - z2
-d2_m30_diffr <- ob2_l_fo_m30_c$roll - roll2
-d2_m30_diffp <- ob2_l_fo_m30_c$pitch - pitch2
-d2_m30_diffya <- ob2_l_fo_m30_c$yaw - yaw2 - 30
+d2_m30_diffx <- -(ob2_l_fo_m30_c$X - x2)
+d2_m30_diffy <- -(ob2_l_fo_m30_c$Y - y2)
+d2_m30_diffz <- -(ob2_l_fo_m30_c$Z - z2)
+d2_m30_diffr <- -(ob2_l_fo_m30_c$roll - roll2)
+d2_m30_diffp <- -(ob2_l_fo_m30_c$pitch - pitch2)
+d2_m30_diffya <- -(ob2_l_fo_m30_c$yaw - yaw2 - 30)
 
-d3_m30_diffx <- ob3_cu_fo_m30_c$X - x3
-d3_m30_diffy <- ob3_cu_fo_m30_c$Y - y3
-d3_m30_diffz <- ob3_cu_fo_m30_c$Z - z3
-d3_m30_diffr <- ob3_cu_fo_m30_c$roll - roll3
-d3_m30_diffp <- ob3_cu_fo_m30_c$pitch - pitch3
-d3_m30_diffya <- ob3_cu_fo_m30_c$yaw - yaw3 - 30
+d3_m30_diffx <- -(ob3_cu_fo_m30_c$X - x3)
+d3_m30_diffy <- -(ob3_cu_fo_m30_c$Y - y3)
+d3_m30_diffz <- -(ob3_cu_fo_m30_c$Z - z3)
+d3_m30_diffr <- -(ob3_cu_fo_m30_c$roll - roll3)
+d3_m30_diffp <- -(ob3_cu_fo_m30_c$pitch - pitch3)
+d3_m30_diffya <- -(ob3_cu_fo_m30_c$yaw - yaw3 - 30)
 
-d4_m20_diffx <- ob4_ca_fo_m20_c$X - x4
-d4_m20_diffy <- ob4_ca_fo_m20_c$Y - y4
-d4_m20_diffz <- ob4_ca_fo_m20_c$Z - z4
-d4_m20_diffr <- ob4_ca_fo_m20_c$roll - roll4
-d4_m20_diffp <- ob4_ca_fo_m20_c$pitch - pitch4
-d4_m20_diffya <- ob4_ca_fo_m20_c$yaw - yaw4 - 20
+d4_m20_diffx <- -(ob4_ca_fo_m20_c$X - x4)
+d4_m20_diffy <- -(ob4_ca_fo_m20_c$Y - y4)
+d4_m20_diffz <- -(ob4_ca_fo_m20_c$Z - z4)
+d4_m20_diffr <- -(ob4_ca_fo_m20_c$roll - roll4)
+d4_m20_diffp <- -(ob4_ca_fo_m20_c$pitch - pitch4)
+d4_m20_diffya <- -(ob4_ca_fo_m20_c$yaw - yaw4 - 20)
 
 # +10,20,30 grados
-d1_p10_diffx <- ob1_e_fo_p10_c$X - x1
-d1_p10_diffy <- ob1_e_fo_p10_c$Y - y1
-d1_p10_diffz <- ob1_e_fo_p10_c$Z - z1
-d1_p10_diffr <- ob1_e_fo_p10_c$roll - roll1
-d1_p10_diffp <- ob1_e_fo_p10_c$pitch - pitch1
-d1_p10_diffya <- ob1_e_fo_p10_c$yaw - yaw1 - 30
+d1_p10_diffx <- -(ob1_e_fo_p10_c$X - x1)
+d1_p10_diffy <- -(ob1_e_fo_p10_c$Y - y1)
+d1_p10_diffz <- -(ob1_e_fo_p10_c$Z - z1)
+d1_p10_diffr <- -(ob1_e_fo_p10_c$roll - roll1)
+d1_p10_diffp <- -(ob1_e_fo_p10_c$pitch - pitch1)
+d1_p10_diffya <- -(ob1_e_fo_p10_c$yaw - yaw1 - 30)
 
-d2_p30_diffx <- ob2_l_fo_p30_c$X - x2
-d2_p30_diffy <- ob2_l_fo_p30_c$Y - y2
-d2_p30_diffz <- ob2_l_fo_p30_c$Z - z2
-d2_p30_diffr <- ob2_l_fo_p30_c$roll - roll2
-d2_p30_diffp <- ob2_l_fo_p30_c$pitch - pitch2
-d2_p30_diffya <- ob2_l_fo_p30_c$yaw - yaw2 - 30
+d2_p30_diffx <- -(ob2_l_fo_p30_c$X - x2)
+d2_p30_diffy <- -(ob2_l_fo_p30_c$Y - y2)
+d2_p30_diffz <- -(ob2_l_fo_p30_c$Z - z2)
+d2_p30_diffr <- -(ob2_l_fo_p30_c$roll - roll2)
+d2_p30_diffp <- -(ob2_l_fo_p30_c$pitch - pitch2)
+d2_p30_diffya <- -(ob2_l_fo_p30_c$yaw - yaw2 - 30)
 
-d3_p20_diffx <- ob3_cu_fo_p20_c$X - x3
-d3_p20_diffy <- ob3_cu_fo_p20_c$Y - y3
-d3_p20_diffz <- ob3_cu_fo_p20_c$Z - z3
-d3_p20_diffr <- ob3_cu_fo_p20_c$roll - roll3
-d3_p20_diffp <- ob3_cu_fo_p20_c$pitch - pitch3
-d3_p20_diffya <- ob3_cu_fo_p20_c$yaw - yaw3 - 30
+d3_p20_diffx <- -(ob3_cu_fo_p20_c$X - x3)
+d3_p20_diffy <- -(ob3_cu_fo_p20_c$Y - y3)
+d3_p20_diffz <- -(ob3_cu_fo_p20_c$Z - z3)
+d3_p20_diffr <- -(ob3_cu_fo_p20_c$roll - roll3)
+d3_p20_diffp <- -(ob3_cu_fo_p20_c$pitch - pitch3)
+d3_p20_diffya <- -(ob3_cu_fo_p20_c$yaw - yaw3 - 30)
 
-d4_p30_diffx <- ob4_ca_fo_p30_c$X - x4
-d4_p30_diffy <- ob4_ca_fo_p30_c$Y - y4
-d4_p30_diffz <- ob4_ca_fo_p30_c$Z - z4
-d4_p30_diffr <- ob4_ca_fo_p30_c$roll - roll4
-d4_p30_diffp <- ob4_ca_fo_p30_c$pitch - pitch4
-d4_p30_diffya <- ob4_ca_fo_p30_c$yaw - yaw4 - 20
+d4_p30_diffx <- -(ob4_ca_fo_p30_c$X - x4)
+d4_p30_diffy <- -(ob4_ca_fo_p30_c$Y - y4)
+d4_p30_diffz <- -(ob4_ca_fo_p30_c$Z - z4)
+d4_p30_diffr <- -(ob4_ca_fo_p30_c$roll - roll4)
+d4_p30_diffp <- -(ob4_ca_fo_p30_c$pitch - pitch4)
+d4_p30_diffya <- -(ob4_ca_fo_p30_c$yaw - yaw4 - 20)
 
 ######################################
 #### Calculo de diferencias BRISK ####
 ######################################
 
 # Cero grados
-b1_0_diffx <- ob1_e_b_0_c$X - x1
-b1_0_diffy <- ob1_e_b_0_c$Y - y1
-b1_0_diffz <- ob1_e_b_0_c$Z - z1
-b1_0_diffr <- ob1_e_b_0_c$roll - roll1
-b1_0_diffp <- ob1_e_b_0_c$pitch - pitch1
-b1_0_diffya <- ob1_e_b_0_c$yaw - yaw1
+b1_0_diffx <- -(ob1_e_b_0_c$X - x1)
+b1_0_diffy <- -(ob1_e_b_0_c$Y - y1)
+b1_0_diffz <- -(ob1_e_b_0_c$Z - z1)
+b1_0_diffr <- -(ob1_e_b_0_c$roll - roll1)
+b1_0_diffp <- -(ob1_e_b_0_c$pitch - pitch1)
+b1_0_diffya <- -(ob1_e_b_0_c$yaw - yaw1)
 
-b2_0_diffx <- ob2_l_b_0_c$X - x2
-b2_0_diffy <- ob2_l_b_0_c$Y - y2
-b2_0_diffz <- ob2_l_b_0_c$Z - z2
-b2_0_diffr <- ob2_l_b_0_c$roll - roll2
-b2_0_diffp <- ob2_l_b_0_c$pitch - pitch2
-b2_0_diffya <- ob2_l_b_0_c$yaw - yaw2
+b2_0_diffx <- -(ob2_l_b_0_c$X - x2)
+b2_0_diffy <- -(ob2_l_b_0_c$Y - y2)
+b2_0_diffz <- -(ob2_l_b_0_c$Z - z2)
+b2_0_diffr <- -(ob2_l_b_0_c$roll - roll2)
+b2_0_diffp <- -(ob2_l_b_0_c$pitch - pitch2)
+b2_0_diffya <- -(ob2_l_b_0_c$yaw - yaw2)
 
-b3_0_diffx <- ob3_cu_b_0_c$X - x3
-b3_0_diffy <- ob3_cu_b_0_c$Y - y3
-b3_0_diffz <- ob3_cu_b_0_c$Z - z3
-b3_0_diffr <- ob3_cu_b_0_c$roll - roll3
-b3_0_diffp <- ob3_cu_b_0_c$pitch - pitch3
-b3_0_diffya <- ob3_cu_b_0_c$yaw - yaw3
+b3_0_diffx <- -(ob3_cu_b_0_c$X - x3)
+b3_0_diffy <- -(ob3_cu_b_0_c$Y - y3)
+b3_0_diffz <- -(ob3_cu_b_0_c$Z - z3)
+b3_0_diffr <- -(ob3_cu_b_0_c$roll - roll3)
+b3_0_diffp <- -(ob3_cu_b_0_c$pitch - pitch3)
+b3_0_diffya <- -(ob3_cu_b_0_c$yaw - yaw3)
 
-b4_0_diffx <- ob4_ca_b_0_c$X - x4
-b4_0_diffy <- ob4_ca_b_0_c$Y - y4
-b4_0_diffz <- ob4_ca_b_0_c$Z - z4
-b4_0_diffr <- ob4_ca_b_0_c$roll - roll4
-b4_0_diffp <- ob4_ca_b_0_c$pitch - pitch4
-b4_0_diffya <- ob4_ca_b_0_c$yaw - yaw4
+b4_0_diffx <- -(ob4_ca_b_0_c$X - x4)
+b4_0_diffy <- -(ob4_ca_b_0_c$Y - y4)
+b4_0_diffz <- -(ob4_ca_b_0_c$Z - z4)
+b4_0_diffr <- -(ob4_ca_b_0_c$roll - roll4)
+b4_0_diffp <- -(ob4_ca_b_0_c$pitch - pitch4)
+b4_0_diffya <- -(ob4_ca_b_0_c$yaw - yaw4)
 
 # -15,-10 grados
-b2_m15_diffx <- ob2_l_b_m15_c$X - x2
-b2_m15_diffy <- ob2_l_b_m15_c$Y - y2
-b2_m15_diffz <- ob2_l_b_m15_c$Z - z2
-b2_m15_diffr <- ob2_l_b_m15_c$roll - roll2
-b2_m15_diffp <- ob2_l_b_m15_c$pitch - pitch2
-b2_m15_diffya <- ob2_l_b_m15_c$yaw - yaw2 - 15
+b2_m15_diffx <- -(ob2_l_b_m15_c$X - x2)
+b2_m15_diffy <- -(ob2_l_b_m15_c$Y - y2)
+b2_m15_diffz <- -(ob2_l_b_m15_c$Z - z2)
+b2_m15_diffr <- -(ob2_l_b_m15_c$roll - roll2)
+b2_m15_diffp <- -(ob2_l_b_m15_c$pitch - pitch2)
+b2_m15_diffya <- -(ob2_l_b_m15_c$yaw - yaw2 - 15)
 
-b3_m15_diffx <- ob3_cu_b_m15_c$X - x3
-b3_m15_diffy <- ob3_cu_b_m15_c$Y - y3
-b3_m15_diffz <- ob3_cu_b_m15_c$Z - z3
-b3_m15_diffr <- ob3_cu_b_m15_c$roll - roll3
-b3_m15_diffp <- ob3_cu_b_m15_c$pitch - pitch3
-b3_m15_diffya <- ob3_cu_b_m15_c$yaw - yaw3 - 15
+b3_m15_diffx <- -(ob3_cu_b_m15_c$X - x3)
+b3_m15_diffy <- -(ob3_cu_b_m15_c$Y - y3)
+b3_m15_diffz <- -(ob3_cu_b_m15_c$Z - z3)
+b3_m15_diffr <- -(ob3_cu_b_m15_c$roll - roll3)
+b3_m15_diffp <- -(ob3_cu_b_m15_c$pitch - pitch3)
+b3_m15_diffya <- -(ob3_cu_b_m15_c$yaw - yaw3 - 15)
 
-b4_m10_diffx <- ob4_ca_b_m10_c$X - x4
-b4_m10_diffy <- ob4_ca_b_m10_c$Y - y4
-b4_m10_diffz <- ob4_ca_b_m10_c$Z - z4
-b4_m10_diffr <- ob4_ca_b_m10_c$roll - roll4
-b4_m10_diffp <- ob4_ca_b_m10_c$pitch - pitch4
-b4_m10_diffya <- ob4_ca_b_m10_c$yaw - yaw4 -10
+b4_m10_diffx <- -(ob4_ca_b_m10_c$X - x4)
+b4_m10_diffy <- -(ob4_ca_b_m10_c$Y - y4)
+b4_m10_diffz <- -(ob4_ca_b_m10_c$Z - z4)
+b4_m10_diffr <- -(ob4_ca_b_m10_c$roll - roll4)
+b4_m10_diffp <- -(ob4_ca_b_m10_c$pitch - pitch4)
+b4_m10_diffya <- -(ob4_ca_b_m10_c$yaw - yaw4 -10)
 
 # +15 grados
-b2_p15_diffx <- ob2_l_b_p15_c$X - x2
-b2_p15_diffy <- ob2_l_b_p15_c$Y - y2
-b2_p15_diffz <- ob2_l_b_p15_c$Z - z2
-b2_p15_diffr <- ob2_l_b_p15_c$roll - roll2
-b2_p15_diffp <- ob2_l_b_p15_c$pitch - pitch2
-b2_p15_diffya <- ob2_l_b_p15_c$yaw - yaw2 + 15
+b2_p15_diffx <- -(ob2_l_b_p15_c$X - x2)
+b2_p15_diffy <- -(ob2_l_b_p15_c$Y - y2)
+b2_p15_diffz <- -(ob2_l_b_p15_c$Z - z2)
+b2_p15_diffr <- -(ob2_l_b_p15_c$roll - roll2)
+b2_p15_diffp <- -(ob2_l_b_p15_c$pitch - pitch2)
+b2_p15_diffya <- -(ob2_l_b_p15_c$yaw - yaw2 + 15)
 
-b3_p15_diffx <- ob3_cu_b_p15_c$X - x3
-b3_p15_diffy <- ob3_cu_b_p15_c$Y - y3
-b3_p15_diffz <- ob3_cu_b_p15_c$Z - z3
-b3_p15_diffr <- ob3_cu_b_p15_c$roll - roll3
-b3_p15_diffp <- ob3_cu_b_p15_c$pitch - pitch3
-b3_p15_diffya <- ob3_cu_b_p15_c$yaw - yaw3 + 15
+b3_p15_diffx <- -(ob3_cu_b_p15_c$X - x3)
+b3_p15_diffy <- -(ob3_cu_b_p15_c$Y - y3)
+b3_p15_diffz <- -(ob3_cu_b_p15_c$Z - z3)
+b3_p15_diffr <- -(ob3_cu_b_p15_c$roll - roll3)
+b3_p15_diffp <- -(ob3_cu_b_p15_c$pitch - pitch3)
+b3_p15_diffya <- -(ob3_cu_b_p15_c$yaw - yaw3 + 15)
 
-b4_p15_diffx <- ob4_ca_b_p15_c$X - x4
-b4_p15_diffy <- ob4_ca_b_p15_c$Y - y4
-b4_p15_diffz <- ob4_ca_b_p15_c$Z - z4
-b4_p15_diffr <- ob4_ca_b_p15_c$roll - roll4
-b4_p15_diffp <- ob4_ca_b_p15_c$pitch - pitch4
-b4_p15_diffya <- ob4_ca_b_p15_c$yaw - yaw4 + 15
+b4_p15_diffx <- -(ob4_ca_b_p15_c$X - x4)
+b4_p15_diffy <- -(ob4_ca_b_p15_c$Y - y4)
+b4_p15_diffz <- -(ob4_ca_b_p15_c$Z - z4)
+b4_p15_diffr <- -(ob4_ca_b_p15_c$roll - roll4)
+b4_p15_diffp <- -(ob4_ca_b_p15_c$pitch - pitch4)
+b4_p15_diffya <- -(ob4_ca_b_p15_c$yaw - yaw4 + 15)
 
 ######################################
 #### Calculo de diferencias Edgar ####
 ######################################
 
 # Cero grados
-e1_0_diffx <- ob1_e_e_0_c$X - x1
-e1_0_diffy <- ob1_e_e_0_c$Y - ye
-e1_0_diffz <- ob1_e_e_0_c$Z - z1
-e1_0_diffr <- ob1_e_e_0_c$roll - roll1
-e1_0_diffp <- ob1_e_e_0_c$pitch - pitch1
-e1_0_diffya <- ob1_e_e_0_c$yaw - yaw1
+e1_0_diffx <- -(ob1_e_e_0_c$X - x1)
+e1_0_diffy <- -(ob1_e_e_0_c$Y - ye)
+e1_0_diffz <- -(ob1_e_e_0_c$Z - z1)
+e1_0_diffr <- -(ob1_e_e_0_c$roll - roll1)
+e1_0_diffp <- -(ob1_e_e_0_c$pitch - pitch1)
+e1_0_diffya <- -(ob1_e_e_0_c$yaw - yaw1)
 
-e2_0_diffx <- ob2_l_e_0_c$X - x2
-e2_0_diffy <- ob2_l_e_0_c$Y - ye
-e2_0_diffz <- ob2_l_e_0_c$Z - z2
-e2_0_diffr <- ob2_l_e_0_c$roll - roll2
-e2_0_diffp <- ob2_l_e_0_c$pitch - pitch2
-e2_0_diffya <- ob2_l_e_0_c$yaw - yaw2
+e2_0_diffx <- -(ob2_l_e_0_c$X - x2)
+e2_0_diffy <- -(ob2_l_e_0_c$Y - ye)
+e2_0_diffz <- -(ob2_l_e_0_c$Z - z2)
+e2_0_diffr <- -(ob2_l_e_0_c$roll - roll2)
+e2_0_diffp <- -(ob2_l_e_0_c$pitch - pitch2)
+e2_0_diffya <- -(ob2_l_e_0_c$yaw - yaw2)
 
-e3_0_diffx <- ob3_cu_e_0_c$X - x3
-e3_0_diffy <- ob3_cu_e_0_c$Y - ye
-e3_0_diffz <- ob3_cu_e_0_c$Z - z3
-e3_0_diffr <- ob3_cu_e_0_c$roll - roll3
-e3_0_diffp <- ob3_cu_e_0_c$pitch - pitch3
-e3_0_diffya <- ob3_cu_e_0_c$yaw - yaw3
+e3_0_diffx <- -(ob3_cu_e_0_c$X - x3)
+e3_0_diffy <- -(ob3_cu_e_0_c$Y - ye)
+e3_0_diffz <- -(ob3_cu_e_0_c$Z - z3)
+e3_0_diffr <- -(ob3_cu_e_0_c$roll - roll3)
+e3_0_diffp <- -(ob3_cu_e_0_c$pitch - pitch3)
+e3_0_diffya <- -(ob3_cu_e_0_c$yaw - yaw3)
 
-e4_0_diffx <- ob4_ca_e_0_c$X - x4
-e4_0_diffy <- ob4_ca_e_0_c$Y - ye
-e4_0_diffz <- ob4_ca_e_0_c$Z - z4
-e4_0_diffr <- ob4_ca_e_0_c$roll - roll4
-e4_0_diffp <- ob4_ca_e_0_c$pitch - pitch4
-e4_0_diffya <- ob4_ca_e_0_c$yaw - yaw4
+e4_0_diffx <- -(ob4_ca_e_0_c$X - x4)
+e4_0_diffy <- -(ob4_ca_e_0_c$Y - ye)
+e4_0_diffz <- -(ob4_ca_e_0_c$Z - z4)
+e4_0_diffr <- -(ob4_ca_e_0_c$roll - roll4)
+e4_0_diffp <- -(ob4_ca_e_0_c$pitch - pitch4)
+e4_0_diffya <- -(ob4_ca_e_0_c$yaw - yaw4)
 
 # -30 grados
-e3_m30_diffx <- ob3_cu_e_m30_c$X - x3
-e3_m30_diffy <- ob3_cu_e_m30_c$Y - ye
-e3_m30_diffz <- ob3_cu_e_m30_c$Z - z3
-e3_m30_diffr <- ob3_cu_e_m30_c$roll - roll3
-e3_m30_diffp <- ob3_cu_e_m30_c$pitch - pitch3
-e3_m30_diffya <- ob3_cu_e_m30_c$yaw - yaw3
+e3_m30_diffx <- -(ob3_cu_e_m30_c$X - x3)
+e3_m30_diffy <- -(ob3_cu_e_m30_c$Y - ye)
+e3_m30_diffz <- -(ob3_cu_e_m30_c$Z - z3)
+e3_m30_diffr <- -(ob3_cu_e_m30_c$roll - roll3)
+e3_m30_diffp <- -(ob3_cu_e_m30_c$pitch - pitch3)
+e3_m30_diffya <- -(ob3_cu_e_m30_c$yaw - yaw3)
 
-e4_m30_diffx <- ob4_ca_e_m30_c$X - x4
-e4_m30_diffy <- ob4_ca_e_m30_c$Y - ye
-e4_m30_diffz <- ob4_ca_e_m30_c$Z - z4
-e4_m30_diffr <- ob4_ca_e_m30_c$roll - roll4
-e4_m30_diffp <- ob4_ca_e_m30_c$pitch - pitch4
-e4_m30_diffya <- ob4_ca_e_m30_c$yaw - yaw4
+e4_m30_diffx <- -(ob4_ca_e_m30_c$X - x4)
+e4_m30_diffy <- -(ob4_ca_e_m30_c$Y - ye)
+e4_m30_diffz <- -(ob4_ca_e_m30_c$Z - z4)
+e4_m30_diffr <- -(ob4_ca_e_m30_c$roll - roll4)
+e4_m30_diffp <- -(ob4_ca_e_m30_c$pitch - pitch4)
+e4_m30_diffya <- -(ob4_ca_e_m30_c$yaw - yaw4)
 
 # +30 grados
-e3_p30_diffx <- ob3_cu_e_p30_c$X - x3
-e3_p30_diffy <- ob3_cu_e_p30_c$Y - ye
-e3_p30_diffz <- ob3_cu_e_p30_c$Z - z3
-e3_p30_diffr <- ob3_cu_e_p30_c$roll - roll3
-e3_p30_diffp <- ob3_cu_e_p30_c$pitch - pitch3
-e3_p30_diffya <- ob3_cu_e_p30_c$yaw - yaw3
+e3_p30_diffx <- -(ob3_cu_e_p30_c$X - x3)
+e3_p30_diffy <- -(ob3_cu_e_p30_c$Y - ye)
+e3_p30_diffz <- -(ob3_cu_e_p30_c$Z - z3)
+e3_p30_diffr <- -(ob3_cu_e_p30_c$roll - roll3)
+e3_p30_diffp <- -(ob3_cu_e_p30_c$pitch - pitch3)
+e3_p30_diffya <- -(ob3_cu_e_p30_c$yaw - yaw3)
 
-e4_p30_diffx <- ob4_ca_e_p30_c$X - x4
-e4_p30_diffy <- ob4_ca_e_p30_c$Y - ye
-e4_p30_diffz <- ob4_ca_e_p30_c$Z - z4
-e4_p30_diffr <- ob4_ca_e_p30_c$roll - roll4
-e4_p30_diffp <- ob4_ca_e_p30_c$pitch - pitch4
-e4_p30_diffya <- ob4_ca_e_p30_c$yaw - yaw4
+e4_p30_diffx <- -(ob4_ca_e_p30_c$X - x4)
+e4_p30_diffy <- -(ob4_ca_e_p30_c$Y - ye)
+e4_p30_diffz <- -(ob4_ca_e_p30_c$Z - z4)
+e4_p30_diffr <- -(ob4_ca_e_p30_c$roll - roll4)
+e4_p30_diffp <- -(ob4_ca_e_p30_c$pitch - pitch4)
+e4_p30_diffya <- -(ob4_ca_e_p30_c$yaw - yaw4)
 
 ###############################################
 #### Errores relativos ORB (Solo en X,Y,Z) ####
