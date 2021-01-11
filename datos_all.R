@@ -134,7 +134,7 @@ ob4_ca_b_m10_c$time <- round(ob4_ca_b_m10_c$time - ob4_ca_b_m10_c$time[1])
 
 ob2_l_b_p15_c$time <- round(ob2_l_b_p15_c$time - ob2_l_b_p15_c$time[1])
 ob3_cu_b_p15_c$time <- round(ob3_cu_b_p15_c$time - ob3_cu_b_p15_c$time[1])
-ob4_ca_b_p15_c$time <- round(as.numeric(ob4_ca_b_p15_c$time - ob4_ca_b_p15_c$time[1]))   ##Hay un mame
+ob4_ca_b_p15_c$time <- round(ob4_ca_b_p15_c$time - ob4_ca_b_p15_c$time[1])   ##Hay un mame
 
 # Edgar
 ob1_e_e_0_c$time <- round(ob1_e_e_0_c$time - ob1_e_e_0_c$time[1])
@@ -601,10 +601,14 @@ b4_m10_net <- list(b4_m10_diffx,b4_m10_diffy,b4_m10_diffz,b4_m10_diffr,b4_m10_di
 b2_p15_net <- list(b2_p15_diffx,b2_p15_diffy,b2_p15_diffz,b2_p15_diffr,b2_p15_diffp,b2_p15_diffya)
 b3_p15_net <- list(b3_p15_diffx,b3_p15_diffy,b3_p15_diffz,b3_p15_diffr,b3_p15_diffp,b3_p15_diffya)
 b4_p15_net <- list(b4_p15_diffx,b4_p15_diffy,b4_p15_diffz,b4_p15_diffr,b4_p15_diffp,b4_p15_diffya)
+#  b4_p15_net[[6]] <- na.exclude(b4_p15_net[[6]])
 
 #Edgar
 e1_0_net <- list(e1_0_diffx,e1_0_diffy,e1_0_diffz,e1_0_diffr,e1_0_diffp,e1_0_diffya)
 e2_0_net <- list(e2_0_diffx,e2_0_diffy,e2_0_diffz,e2_0_diffr,e2_0_diffp,e2_0_diffya)
+for (j in c(1:6)) {
+  e2_0_net[[j]] <- na.exclude(e2_0_net[[j]])
+}  
 e3_0_net <- list(e3_0_diffx,e3_0_diffy,e3_0_diffz,e3_0_diffr,e3_0_diffp,e3_0_diffya)
 e4_0_net <- list(e4_0_diffx,e4_0_diffy,e4_0_diffz,e4_0_diffr,e4_0_diffp,e4_0_diffya)
 
@@ -678,7 +682,7 @@ st4_m20 <- sapply(d4_m20_net, sd)
 st1_p10 <- sapply(d1_p10_net, sd)
 st2_p30 <- sapply(d2_p30_net, sd)
 st3_p20 <- sapply(d3_p20_net, sd)
-st4_p30 <- sapply(d4_p10_net, sd)
+st4_p30 <- sapply(d4_p30_net, sd)
 
 # BRISK
 stb1_0 <- sapply(b1_0_net, sd)
@@ -686,13 +690,13 @@ stb2_0 <- sapply(b2_0_net, sd)
 stb3_0 <- sapply(b3_0_net, sd)
 stb4_0 <- sapply(b4_0_net, sd)
 
-stb_m15 <- sapply(b2_m15_net, sd)
-stb_m15 <- sapply(b3_m15_net, sd)
-stb_m10 <- sapply(b4_m10_net, sd)
+stb2_m15 <- sapply(b2_m15_net, sd)
+stb3_m15 <- sapply(b3_m15_net, sd)
+stb4_m10 <- sapply(b4_m10_net, sd)
 
-stb_p15 <- sapply(b2_p15_net, sd)
-stb_p15 <- sapply(b3_p15_net, sd)
-stb_p15 <- sapply(b4_p15_net, sd)
+stb2_p15 <- sapply(b2_p15_net, sd)
+stb3_p15 <- sapply(b3_p15_net, sd)
+stb4_p15 <- sapply(b4_p15_net, sd)
 
 #Edgar
 ste1_0 <- sapply(e1_0_net, sd)
@@ -737,6 +741,7 @@ d4_p30_df <- data.frame(time = ob4_ca_fo_p30_c$time, dx = d4_p30_diffx, dy = d4_
 #BRISK
 b1_0_df <- data.frame(time = ob1_e_b_0_c$time, dx = b1_0_diffx, dy = b1_0_diffy, dz = b1_0_diffz, dr = b1_0_diffr, dp = b1_0_diffp, dya = b1_0_diffya, alg = "BRISK") 
 b2_0_df <- data.frame(time = ob2_l_b_0_c$time, dx = b2_0_diffx, dy = b2_0_diffy, dz = b2_0_diffz, dr = b2_0_diffr, dp = b2_0_diffp, dya = b2_0_diffya, alg = "BRISK") 
+#  b2_0_df <- b2_0_df[-c(95,96),]
 b3_0_df <- data.frame(time = ob3_cu_b_0_c$time, dx = b3_0_diffx, dy = b3_0_diffy, dz = b3_0_diffz, dr = b3_0_diffr, dp = b3_0_diffp, dya = b3_0_diffya, alg = "BRISK") 
 b4_0_df <- data.frame(time = ob4_ca_b_0_c$time, dx = b4_0_diffx, dy = b4_0_diffy, dz = b4_0_diffz, dr = b4_0_diffr, dp = b4_0_diffp, dya = b4_0_diffya, alg = "BRISK") 
 
@@ -768,7 +773,7 @@ e4_p30_df <- data.frame(time = ob4_ca_e_p30_c$time, dx = e4_p30_diffx, dy = e4_p
 o1_0 <- rbind.data.frame(d1_0_df,b1_0_df,e1_0_df)
   o1_0 <- o1_0[-c(179),] #Outlier de los datos. Eliminado por motivos de graficacion
 o2_0 <- rbind.data.frame(d2_0_df,b2_0_df,e2_0_df)
-  o2_0 <- o2_0[-c(200,317),]
+  o2_0 <- o2_0[-c(199,200,316,317),]
 o3_0 <- rbind.data.frame(d3_0_df,b3_0_df,e3_0_df)
 o4_0 <- rbind.data.frame(d4_0_df,b4_0_df,e4_0_df)
 
@@ -795,7 +800,7 @@ grafica <- function(dataframe,X,Y,deg,wrt,m_orb,m_brisk,m_pca,numero,objeto) {
   ggplot(dataframe, aes(x=X,y=Y) )+
     geom_point(aes(color = alg)) +
     theme_bw()+
-    scale_y_continuous(breaks = seq(-1, 1, by = 0.01))+
+    scale_y_continuous(breaks = seq(-1.1, 1.1, by = 0.01))+
     geom_hline(yintercept = 0,linetype = "dashed",color = "black",size = 1.2)+
     geom_hline(yintercept = mean(m_orb),linetype = "solid",color = "orange",size = 0.3)+
     geom_hline(yintercept = mean(m_brisk),linetype = "solid",color = "green",size = 0.3)+
@@ -803,7 +808,7 @@ grafica <- function(dataframe,X,Y,deg,wrt,m_orb,m_brisk,m_pca,numero,objeto) {
     labs(title = paste("Objeto",numero,":",objeto,"a",deg,"° en ",wrt),
          subtitle = "Respecto al robot",
          x = "Tiempo [s]",
-         y = paste("Distancia en",wrt,"[m]"),
+         y = paste("Error en",wrt,"[m]"),
          color = "Algoritmo")
 }
 
@@ -901,3 +906,4 @@ g_o4_pd_ya <- grafica_deg(o4_p,o4_p$time,o4_p$dya,"0","yaw",d4_p30_df$dya,b4_p15
 
 
 ## 48 graficas
+
